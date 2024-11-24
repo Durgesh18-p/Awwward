@@ -13,7 +13,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 4;
+  const totalVideos = 3;
   const nextVideoRef = useRef(null);
 
   const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
@@ -118,6 +118,7 @@ const Hero = () => {
             src={getVideoSource(currentIndex)}
             loop
             muted
+            autoPlay
             id="next-video"
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
             onLoadedData={handleVideoLoad}
